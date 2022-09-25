@@ -31,7 +31,7 @@ def sveikoji(skaicus):
 
 # ______________________________________________________________________________________________________________________________________________________________________
 # Pagrindinė funkcija, kurioje vyksta visi konvertavimai.
-def konvertavimas():
+def konvertavimas(*args):
     global ats11, ats1
     ats11 = ""
     # Gauname skaičius prieš ir po kablelio, tai pat skaičiavimo sistemą, į kurią norime konvertuoti.
