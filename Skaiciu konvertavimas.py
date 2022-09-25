@@ -74,8 +74,8 @@ def konvertavimas(*args):
     # Tikrinama ar nėra kitų sistemų.
     elif int(variable3.get()) == 3 or int(variable3.get()) == 4 or int(variable3.get()) == 5 or int(
             variable3.get()) == 6 or int(variable3.get()) == 7 or int(variable3.get()) == 9 or int(
-            variable3.get()) == 10 or int(variable3.get()) == 11 or int(variable3.get()) == 12 or int(
-            variable3.get()) == 13 or int(variable3.get()) == 14 or int(variable3.get()) == 15:
+        variable3.get()) == 10 or int(variable3.get()) == 11 or int(variable3.get()) == 12 or int(
+        variable3.get()) == 13 or int(variable3.get()) == 14 or int(variable3.get()) == 15:
         # Jeigu iš likusių konvertuojama į kitas sistemas, tai pirma susikonvertuojama į dešimtainę, tada iš dešimtainės į reikiamą sistemą. Naudojamasi funkcijomis.
         ats1 = isdesimtaines(idesimtaine(a, variable3.get()), b)
         variable1.set(ats1)
@@ -132,8 +132,8 @@ def konvertavimas(*args):
         # Jei reikia konvertuoti iš nepaminėtų skaičiavimo sistemų pirmą perkonvertuojama į dešimtainę, tada iš dešimtainės į reikiamą
         elif int(variable3.get()) == 3 or int(variable3.get()) == 4 or int(variable3.get()) == 5 or int(
                 variable3.get()) == 6 or int(variable3.get()) == 7 or int(variable3.get()) == 9 or int(
-                variable3.get()) == 10 or int(variable3.get()) == 11 or int(variable3.get()) == 12 or int(
-                variable3.get()) == 13 or int(variable3.get()) == 14 or int(variable3.get()) == 15:
+            variable3.get()) == 10 or int(variable3.get()) == 11 or int(variable3.get()) == 12 or int(
+            variable3.get()) == 13 or int(variable3.get()) == 14 or int(variable3.get()) == 15:
             ats11 = isdesimtainetrupmena(idesimtainetrupmena(c, variable3.get()), b)
         # =======================================================================================================================================================================
         # Išvedame atsakymus
@@ -170,7 +170,8 @@ def rasymas(*args):
                 except:
                     variable.set(opo.replace(x, ""))
                     rasymas()
-                else: x = list(skaiciaikaipraides.keys())[list(skaiciaikaipraides.values()).index(x)]
+                else:
+                    x = list(skaiciaikaipraides.keys())[list(skaiciaikaipraides.values()).index(x)]
             # Tikrinami ar įvesti skaičiai nėra didesni nei pradinė skaičiavimo sistema. Jeigu jie yra didesni, skaičiavimo sistema prisitaiko prie įvestų skaičių.
             if int(x) >= int(rodiklis):
                 rodiklis = x
@@ -441,6 +442,7 @@ oi = Label(a, bd=5, font=("Times", "15"), text=" ←      Skaičiai\n ← po kab
 variable1.set("0")
 variable.set("0")
 mainloop()
+
 
 # ______________________________________________________________________________________________________________________________________________________________________
 # Padaroma, kad nesimatytų klaidų. (Kartais išmeta, bet programai neigiamų efektų nepadaro)
